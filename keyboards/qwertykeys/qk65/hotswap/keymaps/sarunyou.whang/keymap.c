@@ -28,6 +28,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define HOME_L LALT_T(KC_L)
 #define HOME_SCLN RCTL_T(KC_SCLN)
 
+// Left-hand home row mods on symbol layer
+#define HOME_EXLM_SYMBOL LCTL_T(KC_EXLM)
+#define HOME_MINS_SYMBOL LALT_T(KC_MINS)
+#define HOME_PLUS_SYMBOL LGUI_T(KC_PLUS)
+#define HOME_EQL_SYMBOL LSFT_T(KC_EQL)
+
+// Right-hand home row mods on symbol layer
+#define HOME_COLON_SYMBOL RSFT_T(KC_COLN)
+#define HOME_RBRACKET_SYMBOL RGUI_T(KC_RBRC)
+#define HOME_LBRACKET_SYMBOL LALT_T(KC_LBRC)
+#define HOME_QUES_SYMBOL RCTL_T(KC_QUES)
+
+
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [0] = LAYOUT_65_ansi_blocker(
@@ -35,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         LT(1, KC_TAB),  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC, KC_BSLS, KC_PGUP,
         MT(MOD_LCTL,KC_ESC), HOME_A,   HOME_S,  HOME_D,  HOME_F,  KC_G,    KC_H,    HOME_J,  HOME_K,  HOME_L,  HOME_SCLN,  KC_QUOT,          KC_ENT,  KC_PGDN,
         KC_LSFT,          KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT, KC_UP,   MO(1),
-        KC_LCTL, KC_LALT, MO(1),                             KC_SPC,                    KC_BSPC, KC_DEL,          KC_LEFT, KC_DOWN, KC_RGHT
+        KC_LCTL, KC_LALT, MO(1),                             KC_SPC,                    MO(2), KC_DEL,          KC_LEFT, KC_DOWN, KC_RGHT
     ),
 
     [1] = LAYOUT_65_ansi_blocker(
@@ -48,9 +62,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [2] = LAYOUT_65_ansi_blocker(
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS,
-        KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_QUOT, KC_LABK, KC_RABK, KC_DQUO, KC_GRV,  KC_AMPR, KC_SCLN, KC_LBRC, KC_RBRC, KC_PERC, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS, HOME_EXLM_SYMBOL, HOME_MINS_SYMBOL, HOME_PLUS_SYMBOL, HOME_EQL_SYMBOL,  KC_HASH, KC_PIPE, HOME_COLON_SYMBOL, HOME_LBRACKET_SYMBOL, HOME_RBRACKET_SYMBOL, HOME_QUES_SYMBOL, KC_TRNS,          KC_TRNS, KC_TRNS,
+        KC_TRNS,          KC_CIRC, KC_SLSH, KC_ASTR, KC_BSLS, KC_UNDS,  KC_TILD, KC_DLR,  KC_LCBR, KC_RCBR, KC_AT,  KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS,                            KC_TRNS,                   KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS
     ),
 
