@@ -17,16 +17,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include QMK_KEYBOARD_H
 
 // Left-hand home row mods
-#define HOME_A LCTL_T(KC_A)
+#define HOME_A LGUI_T(KC_A)
 #define HOME_S LALT_T(KC_S)
-#define HOME_D LGUI_T(KC_D)
+#define HOME_D LCTL_T(KC_D)
 #define HOME_F LSFT_T(KC_F)
 
 // Right-hand home row mods
 #define HOME_J RSFT_T(KC_J)
-#define HOME_K RGUI_T(KC_K)
+#define HOME_K RCTL_T(KC_K)
 #define HOME_L LALT_T(KC_L)
-#define HOME_SCLN RCTL_T(KC_SCLN)
+#define HOME_SCLN RGUI_T(KC_SCLN)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 

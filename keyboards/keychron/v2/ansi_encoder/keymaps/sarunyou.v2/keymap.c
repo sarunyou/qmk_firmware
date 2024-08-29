@@ -29,16 +29,16 @@ enum layers{
 
 
 // Left-hand home row mods
-#define HOME_A LCTL_T(KC_A)
+#define HOME_A LGUI_T(KC_A)
 #define HOME_S LALT_T(KC_S)
-#define HOME_D LGUI_T(KC_D)
+#define HOME_D LCTL_T(KC_D)
 #define HOME_F LSFT_T(KC_F)
 
 // Right-hand home row mods
 #define HOME_J RSFT_T(KC_J)
-#define HOME_K RGUI_T(KC_K)
+#define HOME_K RCTL_T(KC_K)
 #define HOME_L LALT_T(KC_L)
-#define HOME_SCLN RCTL_T(KC_SCLN)
+#define HOME_SCLN RGUI_T(KC_SCLN)
 
 // Left-hand home row mods on symbol layer
 #define HOME_EXLM_SYMBOL KC_EXLM
@@ -72,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, KC_1,        KC_2,     KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______, _______, _______,          KC_VOLD,
         _______, RGB_RMOD, RGB_VAD,  RGB_HUD, RGB_SAD, RGB_SPD, KC_CAPS, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT,  _______,            _______,          KC_MUTE,
         _______,           _______,  _______, _______, _______, _______, NK_TOGG, _______, _______, _______,  _______,            _______, _______,
-        _______, _______,  _______,                             _______,                            _______,  _______,  _______,  _______, _______, _______),
+        _______, _______,  _______,                             KC_BSPC,                            _______,  _______,  _______,  _______, _______, _______),
 
     [_FN2] = LAYOUT_ansi_67(
         KC_GRV,  KC_BRID,  KC_BRIU,  KC_TASK, KC_FLXP, RGB_VAD, RGB_VAI, KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE,  KC_VOLD,  KC_VOLU,  _______,          RGB_TOG,
