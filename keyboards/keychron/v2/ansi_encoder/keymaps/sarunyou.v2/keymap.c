@@ -16,7 +16,6 @@
 
 #include QMK_KEYBOARD_H
 #include "keychron_common.h"
-#include "features/achordion.h"
 
 // clang-format off
 
@@ -107,12 +106,5 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (!process_record_keychron(keycode, record)) {
         return false;
     }
-
-    if (!process_achordion(keycode, record)) { return false; }
-
     return true;
-}
-
-void matrix_scan_user(void) {
-  achordion_task();
 }
