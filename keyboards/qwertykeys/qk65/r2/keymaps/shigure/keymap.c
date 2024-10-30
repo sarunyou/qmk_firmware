@@ -40,6 +40,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define HOME_LPRN_SYMBOL KC_LPRN
 #define HOME_QUES_SYMBOL KC_QUES
 
+const uint16_t PROGMEM test_combo[] = {KC_A, KC_B, COMBO_END};
+combo_t key_combos[COMBO_COUNT] = {COMBO(test_combo, KC_TAB)};
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [0] = LAYOUT_hotswap(
